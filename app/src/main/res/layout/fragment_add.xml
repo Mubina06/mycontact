@@ -19,7 +19,7 @@
 
 
         <ImageView
-            android:id="@+id/search"
+            android:id="@+id/back"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
@@ -43,7 +43,7 @@
 
 
         <ImageView
-            android:id="@+id/menu"
+            android:id="@+id/add"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
@@ -61,48 +61,114 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
-        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintHorizontal_bias="0.089"
         app:layout_constraintStart_toStartOf="@+id/linearLayout"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
-    <EditText
-        android:id="@+id/et_name"
-        android:layout_width="wrap_content"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/name"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:ems="8"
-        android:inputType="textPersonName"
-        android:hint="Enter name"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="16dp"
+        android:hint="Contact name"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:endIconMode="clear_text"
         app:layout_constraintEnd_toEndOf="@+id/textView2"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="315dp"
+        android:text="Surname"
         android:textColor="@color/black"
         android:textSize="20sp"
-        android:text="Surname"
-        app:layout_constraintEnd_toEndOf="@+id/et_name"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/et_name"
-        app:layout_constraintTop_toBottomOf="@+id/et_name" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonName2"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/surname"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="16dp"
+        android:hint="Contact surname"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:ems="8"
-        android:inputType="textPersonName"
-        android:hint="Enter surname"
-        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="315dp"
+        android:text="Surname"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/surname" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/phoneNumber"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="16dp"
+        android:hint="Contact number"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

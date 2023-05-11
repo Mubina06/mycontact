@@ -5,21 +5,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.navigation.fragment.findNavController
-import com.example.mycontact.databinding.FragmentAddBinding
 
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 
-class AddFragment : Fragment() {
+class MainScreenFragment : Fragment() {
 
     private var param1: String? = null
     private var param2: String? = null
-
-    private lateinit var binding: FragmentAddBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,26 +28,15 @@ class AddFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentAddBinding.inflate(inflater, container, false)
 
-        binding.add.setOnClickListener {
-            if (binding.userName.text == null){
-                Toast.makeText(requireContext(), "You have to fill all inputs", Toast.LENGTH_SHORT).show()
-            } else{
-                findNavController().navigate(R.id.action_addFragment_to_mainScreenFragment)
-            }
-        }
-
-        binding.back.setOnClickListener {
-            findNavController().navigate(R.id.action_addFragment_to_firstFragment)
-        }
-        return binding.root
+        return inflater.inflate(R.layout.fragment_main_screen, container, false)
     }
 
     companion object {
 
+        @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            AddFragment().apply {
+            MainScreenFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

@@ -22,5 +22,13 @@
         <action
             android:id="@+id/action_addFragment_to_firstFragment"
             app:destination="@id/firstFragment" />
+        <action
+            android:id="@+id/action_addFragment_to_mainScreenFragment"
+            app:destination="@id/mainScreenFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/mainScreenFragment"
+        android:name="com.example.mycontact.MainScreenFragment"
+        android:label="fragment_main_screen"
+        tools:layout="@layout/fragment_main_screen" />
 </navigation>
