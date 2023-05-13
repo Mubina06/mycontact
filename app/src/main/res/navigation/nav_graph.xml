@@ -30,5 +30,17 @@
         android:id="@+id/mainScreenFragment"
         android:name="com.example.mycontact.MainScreenFragment"
         android:label="fragment_main_screen"
-        tools:layout="@layout/fragment_main_screen" />
+        tools:layout="@layout/fragment_main_screen" >
+        <action
+            android:id="@+id/action_mainScreenFragment_to_contactInfoFragment"
+            app:destination="@id/contactInfoFragment" />
+        <action
+            android:id="@+id/action_mainScreenFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactInfoFragment"
+        android:name="com.example.mycontact.ContactInfoFragment"
+        android:label="fragment_contact_info"
+        tools:layout="@layout/fragment_contact_info" />
 </navigation>

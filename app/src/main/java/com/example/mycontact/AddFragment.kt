@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
+import com.example.mycontact.DBHelper.DBHelper
+import com.example.mycontact.Data.for_item
 import com.example.mycontact.databinding.FragmentAddBinding
 
 
@@ -34,13 +36,19 @@ class AddFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentAddBinding.inflate(inflater, container, false)
+        var dbHelper = DBHelper(requireContext())
 
         binding.add.setOnClickListener {
+
             if (binding.userName.text == null){
                 Toast.makeText(requireContext(), "You have to fill all inputs", Toast.LENGTH_SHORT).show()
             } else{
                 findNavController().navigate(R.id.action_addFragment_to_mainScreenFragment)
             }
+
+            var name:String = binding.userName.text.toString()
+            var phone:String = binding.phoneN.text.toString()
+            var contact = for_item(name = name, phone_number = phone)
         }
 
         binding.back.setOnClickListener {
